@@ -74,4 +74,4 @@ Visiting `http://localhost:8000/hello.php` in a browser should print the same gr
 
 ## Next
 
-More pages continue this ladder toward a served JSON endpoint — tracked as follow-up work.
+Continue to [02 Hello World](./02-hello-world).
