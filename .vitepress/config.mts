@@ -56,6 +56,15 @@ export default defineConfig({
         items: [
           { text: 'Overview', link: '/beginner/' },
           { text: '01 Install PHP', link: '/beginner/01-install-php' },
+          { text: '02 Hello World', link: '/beginner/02-hello-world' },
+          { text: '03 Variables and Types', link: '/beginner/03-variables-and-types' },
+          { text: '04 Control Flow', link: '/beginner/04-control-flow' },
+          { text: '05 Functions', link: '/beginner/05-functions' },
+          { text: '06 Arrays', link: '/beginner/06-arrays' },
+          { text: '07 Classes', link: '/beginner/07-classes' },
+          { text: '08 Hello HTTP', link: '/beginner/08-hello-http' },
+          { text: '09 JSON Encoding', link: '/beginner/09-json-encoding' },
+          { text: '10 Serving JSON', link: '/beginner/10-serving-json' },
         ]
       },
       {
