@@ -72,6 +72,14 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Overview', link: '/intermediate/' },
+          { text: '01 Why Persistence', link: '/intermediate/01-why-persistence' },
+          { text: '02 Project Setup', link: '/intermediate/02-project-setup' },
+          { text: '03 Schema', link: '/intermediate/03-schema' },
+          { text: '04 Store Layer', link: '/intermediate/04-store-layer' },
+          { text: '05 List and Get Handlers', link: '/intermediate/05-list-get-handlers' },
+          { text: '06 Create Handler', link: '/intermediate/06-create-handler' },
+          { text: '07 Config', link: '/intermediate/07-config' },
+          { text: '08 Tests', link: '/intermediate/08-tests' },
         ]
       },
       {

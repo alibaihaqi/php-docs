@@ -8,18 +8,26 @@ platform: php
 
 This tier extends the Beginner tier's JSON HTTP API with a persistence layer — the API stops holding data in memory and starts reading and writing real storage.
 
-## Where This Is Headed
+## What You'll Build
 
-- **PDO** — PHP's database abstraction layer, used instead of the older mysqli-style APIs so the same code can target SQLite during development and MySQL in production
-- **SQLite** — a zero-setup file-backed database for local development
-- **MySQL** — the production target once the schema and queries are proven against SQLite
-- **Prepared statements** — parameterized queries from the start, not retrofitted later
+`GET /items`, `GET /items/{id}`, and `POST /items` reading and writing an `items.db` SQLite file via PDO, a store layer separating SQL from routing, config via an environment variable, and a PHPUnit test suite. No framework.
 
-The concrete page ladder (schema design, a store layer, wiring persistence into the beginner tier's endpoints) is tracked as follow-up work.
+## Learning Path
+
+| # | Tutorial | Concepts |
+|---|----------|----------|
+| 01 | [Why Persistence](./01-why-persistence) | What the beginner endpoint can't do |
+| 02 | [Project Setup](./02-project-setup) | `pdo_sqlite` extension, `require` |
+| 03 | [Schema](./03-schema) | `PDO`, DSNs, `ERRMODE_EXCEPTION` |
+| 04 | [Store Layer](./04-store-layer) | `ItemStore` class, prepared statements |
+| 05 | [List and Get Handlers](./05-list-get-handlers) | Testable handler shape, `parse_url` |
+| 06 | [Create Handler](./06-create-handler) | `php://input`, null coalescing validation |
+| 07 | [Config](./07-config) | `getenv`, SQLite → MySQL via DSN |
+| 08 | [Tests](./08-tests) | Composer, PHPUnit, in-memory SQLite |
 
 ## Prerequisites
 
 - Completed [Beginner](/beginner/) tier
 - Comfortable with PHP arrays, functions, and the built-in server
 
-Continue building once the ladder above lands.
+Start with [01 Why Persistence](./01-why-persistence).
