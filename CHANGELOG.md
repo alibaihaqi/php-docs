@@ -3,6 +3,27 @@
 All notable changes to the PHP learning-docs site. Newest first.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## 2026-08-05 — feat: complete advanced tier
+
+### Added
+- Pages 01-08 of the Advanced tier: `01-why-production-hardening`,
+  `02-jwt-auth`, `03-rate-limiting`, `04-php-fpm-and-nginx`, `05-docker`,
+  `06-integration-tests`, `07-config-and-secrets`, `08-ci-cd-github-actions`.
+  Adapted from `golang`'s advanced tier rather than mirrored 1:1 — PHP's
+  shared-nothing model has no equivalent to graceful shutdown or
+  connection-pool draining, addressed explicitly on page 01.
+- Sidebar and `advanced/index.md`'s learning-path table updated for all 8 pages.
+
+### Fixed (found via live verification, not just doc review)
+- Dockerfile: `apk add sqlite-dev` before `docker-php-ext-install pdo_sqlite`
+  — `php:8.3-fpm-alpine` has no SQLite dev headers by default, build fails
+  without it.
+- Two example `JWT_SECRET` values were shorter than `firebase/php-jwt`'s
+  32-byte HS256 minimum (an uncaught `DomainException` -> 500 on login) —
+  fixed both, added an explicit callout.
+- Removed a `curl_close()` call from the integration test — no-op since
+  PHP 8.0, deprecated as of 8.5.
+
 ## 2026-08-05 — feat: complete intermediate tier
 
 ### Added

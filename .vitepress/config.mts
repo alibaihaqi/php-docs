@@ -87,6 +87,14 @@ export default defineConfig({
         collapsed: false,
         items: [
           { text: 'Overview', link: '/advanced/' },
+          { text: '01 Why Production Hardening', link: '/advanced/01-why-production-hardening' },
+          { text: '02 JWT Auth', link: '/advanced/02-jwt-auth' },
+          { text: '03 Rate Limiting', link: '/advanced/03-rate-limiting' },
+          { text: '04 php-fpm and Nginx', link: '/advanced/04-php-fpm-and-nginx' },
+          { text: '05 Docker', link: '/advanced/05-docker' },
+          { text: '06 Integration Tests', link: '/advanced/06-integration-tests' },
+          { text: '07 Config and Secrets', link: '/advanced/07-config-and-secrets' },
+          { text: '08 CI/CD GitHub Actions', link: '/advanced/08-ci-cd-github-actions' },
         ]
       },
       {
