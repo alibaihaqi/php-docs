@@ -3,6 +3,24 @@
 All notable changes to the PHP learning-docs site. Newest first.
 Format loosely follows [Keep a Changelog](https://keepachangelog.com/).
 
+## 2026-08-05 — feat: complete intermediate tier
+
+### Added
+- Pages 01-08 of the Intermediate tier, matching `golang`'s intermediate-tier
+  sequence and page count: `01-why-persistence`, `02-project-setup`, `03-schema`,
+  `04-store-layer`, `05-list-get-handlers`, `06-create-handler`, `07-config`,
+  `08-tests`. Extends the beginner tier's `router.php` to a PDO/SQLite-backed
+  CRUD API (`GET /items`, `GET /items/{id}`, `POST /items`), a store layer,
+  env-based config, and a PHPUnit test suite.
+- Sidebar and `intermediate/index.md`'s learning-path table updated for all 8 pages.
+
+### Fixed
+- All `require` calls (doc pages and the verified reference implementation)
+  switched to `require_once` — plain `require` fatals with "cannot redeclare"
+  once two entry points (both `08-tests.md` test files, via PHPUnit) load the
+  same file in one process. Caught by live-running the tier's full code with a
+  local PHP 8.5.9 + Composer install, not just eyeballing it.
+
 ## 2026-08-05 — feat: complete beginner tier
 
 ### Added
